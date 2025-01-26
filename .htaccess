@@ -1,0 +1,3 @@
+# Redirect access to any file or folder within this path to src/index.php
+RewriteEngine On
+RewriteRule ^(.*)$ src/index.php [L]

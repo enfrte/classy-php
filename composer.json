@@ -1,0 +1,9 @@
+{
+    "name": "classy-php/classy",
+    "autoload": {
+        "psr-4": {
+            "ClassyPhp\\Classy\\": "src/"
+        }
+    },
+    "require": {}
+}
