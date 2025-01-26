@@ -2,7 +2,9 @@
 
 namespace ClassyPhp\Classy\Classes;
 
-// This class is a simple wrapper around PHP's superglobals to make it easier to work with request data.
+/**
+ * This class is a simple wrapper around PHP's superglobals to make it easier to work with request data.
+ */
 class Request {
     /**
      * Check if a parameter exists in a specific request type

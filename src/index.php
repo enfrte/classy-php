@@ -27,9 +27,6 @@ $method = $router->getMethod();
 
 echo '<br>Controller: ' . $controller . '<br>';
 echo 'Method: ' . $method . '<br>';
-echo '<pre>';
-print_r($args);
-echo '</pre>';
 
 echo '<pre>';
 
