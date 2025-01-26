@@ -5,6 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use ClassyPhp\Classy\Classes\Request;
 use ClassyPhp\Classy\Classes\Router;
+use ClassyPhp\Classy\Classes\Model;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -18,6 +19,15 @@ if ($request->has('name')) {
 } else {
 	echo 'Hello, World!';
 }
+
+
+$foo = new Model('users');
+$foo->setColumns(['name' => 'John Doe', 'email' => 'jd3@example.com']);
+// $foo->create(); 
+// $foo->update('WHERE id = 1'); 
+// print_r($foo->read()); 
+// $foo->delete('WHERE id = 1');
+print_r($foo->query('SELECT * FROM users WHERE id = ?', [1]));
 
 // Early router development
 $router = new Router();
