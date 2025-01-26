@@ -9,6 +9,7 @@ namespace ClassyPhp\Classy\Classes;
 class Router {
     private $controller;
     private $method;
+	private $routes = [];
 
     public function __construct() {
         $this->parseUrl();
@@ -34,4 +35,13 @@ class Router {
     public function getMethod() {
         return $this->method;
     }
+
+	public function setDefaultRoute($controller, $method) {
+		$this->controller = $controller;
+		$this->method = $method;
+	}
+
+	public function addRoute($controller, $method) {
+		$this->routes[$controller] = $method;
+	}
 }

@@ -21,6 +21,8 @@ if ($request->has('name')) {
 
 // Early router development
 $router = new Router();
+$router->setDefaultRoute('Home', 'index');
+$router->addRoute('About', 'index');
 $controller = $router->getController();
 $method = $router->getMethod();
 // Methods don't have args. Instead pass $_GET params and pick them up in the controller method
