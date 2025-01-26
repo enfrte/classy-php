@@ -23,9 +23,13 @@ if ($request->has('name')) {
 $router = new Router();
 $controller = $router->getController();
 $method = $router->getMethod();
+// Methods don't have args. Instead pass $_GET params and pick them up in the controller method
 
 echo '<br>Controller: ' . $controller . '<br>';
 echo 'Method: ' . $method . '<br>';
+echo '<pre>';
+print_r($args);
+echo '</pre>';
 
 echo '<pre>';
 
